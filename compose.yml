@@ -3,8 +3,6 @@ services:
     tgi:
         command: '--model-id gpt2'
         image: 'ghcr.io/huggingface/text-generation-inference:1.0.2'
-        volumes:
-            - '/home/whiplash/mathewserver.config/hf-tgi/data:/data'
         ports:
             - '8281:80'
         shm_size: 1g    # Recommended is 40% of RAM available
